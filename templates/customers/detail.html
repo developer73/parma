@@ -1,0 +1,10 @@
+{% if customer %}
+    <p>Customer:</p>
+    <p>(ID, First name, Last name, Rating)</p>
+    <p>{{ customer }}</p>
+{% else %}
+    <p>Customer is not available.</p>
+{% endif %}
+
+<br />
+<p><a href="/customers">All customers</a></p>

@@ -1,0 +1,18 @@
+{% if spendings %}
+    <p>Spendings:</p>
+    <table>
+    {% for s in spendings %}
+        <tr>
+            <td>{{ s.0 }}</td>
+            <td>{{ s.1 }}</td>
+            <td>{{ s.2 }}</td>
+            <td>£ {{ s.3 }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No spendings are available.</p>
+{% endif %}
+
+<br />
+<p><a href="/customers">Customers</a></p>

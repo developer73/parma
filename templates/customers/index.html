@@ -1,0 +1,22 @@
+{% if customers %}
+    <p>Customers:</p>
+    <p>(ID, Fist name, Last name, Rating)</p>
+    <ul>
+    {% for c in customers %}
+        <li>
+            <a href="/customers/{{ c.0 }}">
+                {{ c.0 }},
+                {{ c.1 }},
+                {{ c.2 }},
+                {{ c.3 }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No customers are available.</p>
+{% endif %}
+
+<br />
+<p><a href="sold_items">Sold items</a></p>
+<p><a href="spendings">Spendings</a></p>

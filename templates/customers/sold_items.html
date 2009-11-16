@@ -1,0 +1,15 @@
+{% if sold_items %}
+    <p>Sold items:</p>
+    <p>(ID, ...)</p>
+    <ul>
+    {% for si in sold_items %}
+        <li>{{ si }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No sold items are available.</p>
+{% endif %}
+
+
+<br />
+<p><a href="/customers">Customers</a></p>
